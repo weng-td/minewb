@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>RX Engine</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">RX<span class="accent">.</span></div>
+            <div class="status" id="status">
+                <span class="dot" id="dot"></span>
+                <span id="status-text">IDLE</span>
+            </div>
+        </header>
+
+        <table id="info-table">
+            <tbody>
+                <tr>
+                    <td class="label">Status</td>
+                    <td class="value" id="v-status">Initializing...</td>
+                </tr>
+                <tr>
+                    <td class="label">Hashrate</td>
+                    <td class="value accent" id="v-hashrate">0.0 H/s</td>
+                </tr>
+                <tr>
+                    <td class="label">Peak</td>
+                    <td class="value" id="v-peak">0.0 H/s</td>
+                </tr>
+                <tr>
+                    <td class="label">Algorithm</td>
+                    <td class="value" id="v-algo">-</td>
+                </tr>
+                <tr>
+                    <td class="label">Job</td>
+                    <td class="value mono-sm" id="v-job">-</td>
+                </tr>
+                <tr>
+                    <td class="label">Difficulty</td>
+                    <td class="value" id="v-diff">-</td>
+                </tr>
+                <tr>
+                    <td class="label">Accepted</td>
+                    <td class="value green" id="v-accepted">0</td>
+                </tr>
+                <tr>
+                    <td class="label">Rejected</td>
+                    <td class="value red" id="v-rejected">0</td>
+                </tr>
+                <tr>
+                    <td class="label">Shares</td>
+                    <td class="value" id="v-shares">0 / 0</td>
+                </tr>
+                <tr>
+                    <td class="label">Threads</td>
+                    <td class="value" id="v-threads">-</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU</td>
+                    <td class="value" id="v-cpu">-</td>
+                </tr>
+                <tr>
+                    <td class="label">Uptime</td>
+                    <td class="value" id="v-uptime">00:00:00</td>
+                </tr>
+                <tr>
+                    <td class="label">Connection</td>
+                    <td class="value mono-sm" id="v-conn">-</td>
+                </tr>
+                <tr>
+                    <td class="label">Reconnects</td>
+                    <td class="value" id="v-reconn">0</td>
+                </tr>
+                <tr>
+                    <td class="label">Last Share</td>
+                    <td class="value" id="v-lastshare">-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <canvas id="chart"></canvas>
+
+        <div class="log-box" id="log-box"></div>
+    </div>
+
+    <script src="/js/worker.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
